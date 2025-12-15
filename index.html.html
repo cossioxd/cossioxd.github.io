@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDUSTREASWEARS – Moda Urbana Reciclada</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* ============================= */
+/* ========= HEADER ============ */
+/* ============================= */
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #ff004f;
+}
+
+.logo_contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.cabecera h1 {
+    font-size: 1.8rem;
+    color: #ff004f;
+}
+
+.cabecera p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.menu_principal a {
+    text-decoration: none;
+    color: #f5f5f5;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu_principal a:hover {
+    color: #ff004f;
+}
+
+/* ============================= */
+/* =========== BANNER ========== */
+/* ============================= */
+.banner {
+    background: url('banner.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.banner h2 {
+    font-size: 3rem;
+    z-index: 1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.btn_banner {
+    text-decoration: none;
+    background-color: #ff004f;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    z-index: 1;
+}
+
+.btn_banner:hover {
+    background-color: #e60045;
+}
+
+/* ============================= */
+/* ======== SOBRE NOSOTROS ===== */
+/* ============================= */
+.sobre_nosotros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: #1a1a1a;
+}
+
+.sobre_nosotros .texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre_nosotros h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff004f;
+}
+
+.sobre_nosotros p {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.sobre_nosotros .imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* ======== COLECCIONES ========= */
+/* ============================= */
+.colecciones {
+    padding: 80px 5%;
+    background-color: #121212;
+    text-align: center;
+}
+
+.colecciones h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: #ff004f;
+}
+
+.grid_colecciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.coleccion {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.coleccion img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.coleccion h3 {
+    color: #ff004f;
+    margin-bottom: 10px;
+}
+
+.coleccion p {
+    color: #ccc;
+}
+
+.coleccion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,0,79,0.3);
+}
+
+/* ============================= */
+/* ======== NOTICIAS ============ */
+/* ============================= */
+.noticias {
+    padding: 80px 5%;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.noticias h2 {
+    color: #ff004f;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.contenedor_noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.noticia {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.noticia img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.noticia h3 {
+    color: #ff004f;
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    color: #ccc;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,0,79,0.3);
+}
+
+/* ============================= */
+/* ======== IMPACTO ============= */
+/* ============================= */
+.impacto {
+    padding: 80px 5%;
+    background-color: #121212;
+    text-align: center;
+}
+
+.impacto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff004f;
+}
+
+.impacto p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+table th {
+    background-color: #1a1a1a;
+    color: #ff004f;
+}
+
+table tbody tr:hover {
+    background-color: rgba(255,0,79,0.1);
+}
+
+/* ============================= */
+/* ======== CONTACTO ============ */
+/* ============================= */
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px 5%;
+    gap: 50px;
+    background-color: #1a1a1a;
+}
+
+.contacto .mapa {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contacto .formulario {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contacto h2 {
+    color: #ff004f;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.contacto button {
+    background-color: #ff004f;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.contacto button:hover {
+    background-color: #e60045;
+}
+
+/* ============================= */
+/* ========= FOOTER ============ */
+/* ============================= */
+.footer {
+    background-color: #1a1a1a;
+    padding: 40px 5%;
+    text-align: left;
+    color: #ccc;
+}
+
+.footer_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer_links div h3 {
+    color: #ff004f;
+    margin-bottom: 10px;
+}
+
+.footer_links div a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footer_links div a:hover {
+    color: #ff004f;
+}
+
+.footer_links div img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.copy {
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* ============================= */
+/* ======== RESPONSIVE ========= */
+/* ============================= */
+@media screen and (max-width: 900px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu_principal {
+        margin-top: 10px;
+    }
+
+    .sobre_nosotros, .contacto {
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- ========================================================= -->
+    <!-- ===============   ENCABEZADO / HEADER   ================= -->
+    <!-- ========================================================= -->
+    <header class="cabecera">
+        <div class="logo_contenedor">
+
+            <!-- LOGO DE LA EMPRESA -->
+            <img src="logo.png" alt="Logo de INDUSTREASWEARS" class="logo">
+
+            <h1>INDUSTREASWEARS</h1>
+            <p>Moda urbana creada con materiales reciclados</p>
+        </div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <nav class="menu_principal">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Colecciones</a>
+            <a href="#">Materiales</a>
+            <a href="#">Sostenibilidad</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- ====================    BANNER    ======================== -->
+    <!-- ========================================================= -->
+    <!-- Puedes poner la imagen del banner en CSS como fondo -->
+    <section class="banner">
+        <h2>MODA URBANA RECICLADA</h2>
+        <p>Diseños únicos hechos a partir de materiales reutilizados</p>
+        <a href="#" class="btn_banner">Explorar Colección</a>
+    </section>
+
+    <main>
+
+        <!-- ========================================================= -->
+        <!-- ===================   SOBRE NOSOTROS   =================== -->
+        <!-- ========================================================= -->
+        <section class="sobre_nosotros">
+            <div class="texto">
+                <h2>Sobre INDUSTREASWEARS</h2>
+                <p>
+                    Somos una empresa peruana dedicada al diseño de ropa urbana sostenible,
+                    utilizando exclusivamente materiales reciclados como denim recuperado,
+                    poliéster reutilizado y algodón regenerado.
+                </p>
+                <p>
+                    Cada prenda cuenta una historia y reduce el impacto ambiental,
+                    combinando estilo, tecnología textil ecológica y cultura streetwear.
+                </p>
+            </div>
+
+            <div class="imagen">
+
+                <!-- IMAGEN DEL ÁREA SOBRE NOSOTROS -->
+                <img src="equipo de trabajo.jpg" alt="Equipo de diseño en INDUSTREASWEARS">
+
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- ===================   COLECCIONES   ====================== -->
+        <!-- ========================================================= -->
+        <section class="colecciones">
+            <h2>Nuestras Colecciones</h2>
+            
+            <div class="grid_colecciones">
+
+                <!-- COLECCIÓN 1 -->
+                <div class="coleccion">
+                    <img src="coleccion1.jpg" alt="Colección Urban Roots">
+                    <h3>Urban Roots</h3>
+                    <p>Prendas inspiradas en la cultura callejera con denim reciclado.</p>
+                </div>
+
+                <!-- COLECCIÓN 2 -->
+                <div class="coleccion">
+                    <img src="coleccion2.jpg" alt="Colección Eco Street">
+                    <h3>Eco Street</h3>
+                    <p>Materiales reutilizados y diseños minimalistas.</p>
+                </div>
+
+                <!-- COLECCIÓN 3 -->
+                <div class="coleccion">
+                    <img src="coleccion3.jpg" alt="Colección Reborn">
+                    <h3>Reborn</h3>
+                    <p>Poliéster regenerado transformado en moda urbana moderna.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- ======================= NOTICIAS ========================= -->
+        <!-- ========================================================= -->
+        <section class="noticias">
+            <h2>Noticias y Actualizaciones</h2>
+
+            <div class="contenedor_noticias">
+
+                <!-- NOTICIA 1 -->
+                <div class="noticia">
+                    <img src="noticia1.jpg" alt="Nueva colección 2025">
+                    <h3>Lanzamos la colección 2025</h3>
+                    <p>Una línea completa hecha con telas recuperadas del sector industrial.</p>
+                </div>
+
+                <!-- NOTICIA 2 -->
+                <div class="noticia">
+                    <img src="noticia2.jpg" alt="Reciclaje textil">
+                    <h3>¿Cómo reciclamos nuestras telas?</h3>
+                    <p>Conoce el proceso que convierte residuos en moda sostenible.</p>
+                </div>
+
+                <!-- NOTICIA 3 -->
+                <div class="noticia">
+                    <img src="noticia3.jpg" alt="Evento de moda urbana">
+                    <h3>Presencia en eventos urbanos</h3>
+                    <p>Participamos en ferias de diseño y moda ecológica.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- ==================== TABLA DE IMPACTO ====================== -->
+        <!-- ========================================================= -->
+        <section class="impacto">
+            <h2>Nuestro Impacto Ambiental</h2>
+            <p>Resultados del año 2024 aplicando procesos de reciclaje y reutilización textil.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>% Reciclado</th>
+                        <th>Prendas Producidas</th>
+                        <th>CO₂ Reducido</th>
+                        <th>Ahorro de Agua</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Algodón regenerado</td>
+                        <td>82%</td>
+                        <td>3200</td>
+                        <td>150kg</td>
+                        <td>40%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Denim recuperado</td>
+                        <td>91%</td>
+                        <td>2000</td>
+                        <td>310kg</td>
+                        <td>68%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Poliéster reciclado</td>
+                        <td>73%</td>
+                        <td>1500</td>
+                        <td>220kg</td>
+                        <td>55%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- ======================= CONTACTO ========================= -->
+        <!-- ========================================================= -->
+        <section class="contacto">
+            <div class="mapa">
+
+                <!-- MAPA -->
+                <iframe src="https://maps.google.com" frameborder="0"></iframe>
+
+            </div>
+
+            <div class="formulario">
+                <h2>Contáctanos</h2>
+                <p>Solicita pedidos personalizados, colaboraciones o venta por mayor.</p>
+
+                <form action="#" method="post">
+                    <input type="text" placeholder="Nombre Completo" required>
+                    <input type="email" placeholder="Correo Electrónico" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- ======================== FOOTER ========================= -->
+    <!-- ========================================================= -->
+    <footer class="footer">
+        <div class="footer_links">
+
+            <div>
+                <h3>Empresa</h3>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Sostenibilidad</a>
+                <a href="#">Materiales</a>
+            </div>
+
+            <div>
+                <h3>Colecciones</h3>
+                <a href="#">Urban Roots</a>
+                <a href="#">Eco Street</a>
+                <a href="#">Reborn</a>
+            </div>
+
+            <div>
+                <h3>Soporte</h3>
+                <a href="#">Preguntas Frecuentes</a>
+                <a href="#">Políticas</a>
+                <a href="#">Envíos</a>
+            </div>
+
+            <div>
+                <h3>Síguenos</h3>
+
+                <!-- ICONOS DE REDES -->
+                <img src="instagram.png" alt="Instagram">
+                <img src="facebook.png" alt="Facebook">
+                <img src="TikTok.png" alt="TikTok">
+            </div>
+        </div>
+
+        <p class="copy">© 2025 INDUSTREASWEARS – Moda Urbana Reciclada</p>
+    </footer>
+
+</body>
+</html>
